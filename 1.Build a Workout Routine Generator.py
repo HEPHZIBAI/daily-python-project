@@ -1,9 +1,11 @@
 '''
 Project Description
-	Create a program that suggests random workout routines based on user input, making fitness more 	engaging and personalized.
+	Create a program that suggests random workout routines based on user input, making fitness more engaging and personalized.
 
 How the Program Works
-	The program starts by letting the user enter a workout type. For example, in the demo below, the 	user has entered “strength”. Once the user presses Enter, the program selects a random exercise 	(i.e., planlk) from the strength category and prints out the messages as shown below:
+	The program starts by letting the user enter a workout type. 
+	For example, in the demo below, the user has entered “strength”. 
+	Once the user presses Enter, the program selects a random exercise (i.e., planlk) from the strength category and prints out the messages as shown below:
 
 	To make your work easier, we are providing 
 		some strength exercises here:
