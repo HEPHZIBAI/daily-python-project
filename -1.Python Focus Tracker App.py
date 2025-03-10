@@ -1,7 +1,10 @@
 '''
 Project Description
     Today, we will build a Focus Tracker App. 
-    This app will help users stay productive during focus sessions by tracking the time spent on tasks, giving motivational messages, and allowing break reminders. 
+    This app will help users stay productive during focus sessions by 
+        tracking the time spent on tasks, 
+        giving motivational messages, and 
+        allowing break reminders. 
     It’s a simple desktop app with a graphical user interface containing a timer and task management features to boost productivity.
 
 Expected Output
@@ -15,3 +18,22 @@ Prerequisites
     Required Libraries: sys, time, PyQt6
                         pip install PyQt6
 '''
+
+
+import sys
+from PyQt6.QtWidgets import QMainWindow,QLabel,QApplication,QLineEdit,QBoxLayout
+
+app=QApplication(sys.argv)
+window=QMainWindow()
+window.setWindowTitle("Focus Tracker")
+window.setGeometry(400,400,400,400)
+
+label=QLabel("Enter your task",window)
+text=QLabel(window)
+
+layout = QBoxLayout()
+layout.addWidget(label)
+layout.addWidget(text)
+
+window.show()
+sys.exit(app.exec())
