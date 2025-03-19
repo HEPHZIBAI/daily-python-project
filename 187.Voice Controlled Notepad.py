@@ -21,14 +21,14 @@ def filesave(text,savelabel,savedtext):
         savelabel.setText("no text to save!")
         return
     
-    with open('0.Voice Controlled Notepad.txt','a',encoding="utf-8") as f:
+    with open('187.Voice Controlled Notepad.txt','a',encoding="utf-8") as f:
         f.write(text+'\n')
 
     savelabel.setText("File saved successfully!")
     QApplication.processEvents()
     print("file saved")
 
-    with open('0.Voice Controlled Notepad.txt','r',encoding="utf-8") as f:
+    with open('187.Voice Controlled Notepad.txt','r',encoding="utf-8") as f:
         notes=f.read()
 
     if notes.strip():

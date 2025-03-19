@@ -8,7 +8,7 @@ Prerequisites
 '''
 import PyPDF2
 
-with open("11.Extract Text from PDF.pdf","rb") as file:
+with open("198.Extract Text from PDF.pdf","rb") as file:
     reader=PyPDF2.PdfReader(file)
     text=""
     for page in reader.pages:
