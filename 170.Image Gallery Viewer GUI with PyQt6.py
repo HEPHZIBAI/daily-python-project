@@ -18,51 +18,72 @@ Prerequisites
 
 import sys
 import os
-from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QListWidget, QVBoxLayout, QFileDialog ,QMainWindow
-from PyQt6.QtGui import QPixmap
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QListWidget, QListWidgetItem, QFileDialog
+from PyQt6.QtGui import QPixmap, QIcon
+from PyQt6.QtCore import QSize, Qt
 
-class app(QApplication):
-    def __app__(self):
-        
+class ImageGallery(QMainWindow):
+    def __init__(self):
+        super().__init__()
 
+        self.setWindowTitle("Image Gallery Viewer")
+        self.setGeometry(300, 200, 800, 600)
 
-def display(box,image_files):
-    i=image_files.index()
+        lable=QLabel("images",self)
+        lable.setGeometry(10,10,130,30)
 
-def imageget(folder_path):
-    image_files = [f for f in os.listdir(folder_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+        self.image_label = QLabel(self)
+        self.image_label.setGeometry(200, 20, 400, 250)
 
-    for i in image_files:
-        box.addItem(i)
-    display(box,image_files)
+        self.prev_button = QPushButton("Previous", self)
+        self.prev_button.setGeometry(50, 450, 150, 40)
+        self.prev_button.clicked.connect(self.prev_image)
 
-def folder():
-    folder_path = QFileDialog.getExistingDirectory()
-    if folder_path:
-        imageget(folder_path)
+        self.next_button = QPushButton("Next", self)
+        self.next_button.setGeometry(600, 450, 150, 40)
+        self.next_button.clicked.connect(self.next_image)
 
-app=QApplication(sys.argv)
-window=QMainWindow()
+        select = QPushButton("Select Folder", self)
+        select.setGeometry(250, 450, 300, 40)
+        select.clicked.connect(self.folder)
 
-window.setWindowTitle("image gallery viewer")
-window.setGeometry(400,400,400,400)
+    def folder(self):
+        self.folder_path = QFileDialog.getExistingDirectory(self, "Select Folder")
 
-label=QLabel("images",window)
-label.setGeometry(10,10,180,20)
+        if self.folder_path:
+            self.image_files = [f for f in os.listdir(self.folder_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+            self.image_files.sort()
 
-box=QListWidget(window)
-box.setGeometry(10,40,350,200)
+            if self.image_files:
+                for img in self.image_files:
+                    img_path = os.path.join(self.folder_path, img)
+                    pixmap = QPixmap(img_path).scaled(100, 100, Qt.AspectRatioMode.KeepAspectRatio)  # Thumbnail
+                    item = QListWidgetItem(QIcon(pixmap), img)
 
-prev=QPushButton("previous",window)
-prev.setGeometry(10,250,180,40)
+                self.current_index = 0
+                self.image_selected()
+            else:
+                self.image_label.setText("No images found")
 
-next=QPushButton("next",window)
-next.setGeometry(200,250,180,40)
+    def image_selected(self):
+        if self.image_files and self.current_index >= 0:
+            img_path = os.path.join(self.folder_path, self.image_files[self.current_index])
+            pixmap = QPixmap(img_path).scaled(400, 250, Qt.AspectRatioMode.KeepAspectRatio)
+            self.image_label.setPixmap(pixmap)
 
-select=QPushButton("select folder",window)
-select.setGeometry(10,300,360,40)
+    def prev_image(self):
+        """Displays the previous image in the list."""
+        if self.image_files and self.current_index > 0:
+            self.current_index -= 1
+            self.image_selected()
 
-folder_path=select.clicked.connect(lambda:folder())
+    def next_image(self):
+        if self.image_files and self.current_index < len(self.image_files) - 1:
+            self.current_index += 1
+            self.image_selected()
 
-window.show()
-sys.exit(app.exec()) 
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = ImageGallery()
+    window.show()
+    sys.exit(app.exec())
