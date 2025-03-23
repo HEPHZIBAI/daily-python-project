@@ -16,3 +16,27 @@ Learning Benefits
 Prerequisites
     Required Libraries: os, datetime
 '''
+import pandas as pd
+
+class expense:
+    def __init__(self):
+        self.f=pd.read_csv('147.Build an Expense Tracker.csv')
+        print(self.f.head())
+
+    def add(self):
+        date=input("enter date (yyyy-mm-dd): ")
+        category=input("enter category: ")
+        description=input("enter description: ")
+        amount=float(input("enter amount:"))
+        
+        print("expense added successfully!")
+
+option=0
+expenses=expense()
+
+while option!=5:
+    print("welcome to the expense tracker!\n")
+    print("1. add an expense\n2. view all expenses\n3. search expenses by date\n4. calculate total spending\n5. exit\n")
+    option=int(input("choose an option: "))
+    if option==1:
+        expenses.add()

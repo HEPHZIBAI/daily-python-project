@@ -29,9 +29,9 @@ window.setWindowTitle("Focus Tracker")
 window.setGeometry(400,400,400,400)
 
 label=QLabel("Enter your task",window)
-text=QLabel(window)
+text=QLabel("gg",window)
 
-layout = QBoxLayout()
+layout = QBoxLayout(window)
 layout.addWidget(label)
 layout.addWidget(text)
 
