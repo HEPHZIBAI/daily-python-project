@@ -14,12 +14,12 @@ How This Project Matters in the Real-World
     displayed in real-world apps like note-taking tools, blogging platforms, or personal databases.
 
 '''
-f=open("196.Favorite Quote Collector.txt",'a')
+f=open("297.Favorite Quote Collector.txt",'a')
 quote=input("enter your favorite quote : ")
 f.write("\n"+quote)
 print("Quote saved!")
 print("all saved qutes")
-f=open("196.Favorite Quote Collector.txt",'r')
+f=open("297.Favorite Quote Collector.txt",'r')
 k=f.readlines()
 j=1
 for i in k:

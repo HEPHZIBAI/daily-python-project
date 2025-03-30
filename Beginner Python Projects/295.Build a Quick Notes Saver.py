@@ -15,12 +15,12 @@ How This Project Matters in the Real-World
     Understanding how to append data to a file is a useful stepping stone to working with databases and cloud storage solutions.
 
 '''
-f=open("192.Build a Quick Notes Saver.txt",'a')
+f=open("295.Build a Quick Notes Saver.txt",'a')
 print("if you want to stop type stop(without any character or space)")
 note=input("write a note : ")
 while note!="stop":
     f.write(note+"\n")
     note=input()
 print("note saved!")
-f=open("192.Build a Quick Notes Saver.txt",'r')
+f=open("295.Build a Quick Notes Saver.txt",'r')
 print(f.read())

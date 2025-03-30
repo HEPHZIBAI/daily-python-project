@@ -29,7 +29,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sb
 
-df=pd.read_csv("166.CO2 Emission Trend Analysis.csv")
+df=pd.read_csv("282.CO2 Emission Trend Analysis.csv")
 
 x=df["Year"]
 y=df["CO2_Level"]

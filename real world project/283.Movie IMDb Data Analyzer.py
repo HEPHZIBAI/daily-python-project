@@ -25,7 +25,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df=pd.read_csv("167.Movie IMDb Data Analyzer.csv")
+df=pd.read_csv("283.Movie IMDb Data Analyzer.csv")
 ratings=df['Rating']
 
 sns.histplot(ratings)

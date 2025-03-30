@@ -32,7 +32,7 @@ import datetime,random
 current=(datetime.datetime.now().strftime("%A")).lower()
 
 if current=="monday":
-    with open("127.Motivational Quote of the Day.txt", "r") as file:
+    with open("258.Motivational Quote of the Day.txt", "r") as file:
         quotes = file.readlines()
     print("it's monday! time for some motivation!")
     print(random.choice(quotes))
