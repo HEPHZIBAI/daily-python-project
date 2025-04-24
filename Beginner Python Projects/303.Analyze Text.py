@@ -46,3 +46,53 @@ print("total sentence:",sent.count('.')+sent.count('!')+sent.count('?'))
 print("most frequent word:\'",word,"\' (used",s.count(word),"times)")
 print("average word length:",avg/len(sent.split()),"characters")
 print("average sentence length:")
+
+
+
+'''
+# Step 1: Get user input
+text = input("Enter a block of text for analysis:\n")
+
+# Step 2: Initialize counters and storage
+character_count = len(text)
+word_count = len(text.split())
+sentence_count = text.count('.') + text.count('!') + text.count('?')
+word_frequency = {}
+
+# Step 3: Define a function to remove punctuation
+def remove_punctuation(s):
+    punctuation = ".,!?:;'\"()[]{}"
+    for char in punctuation:
+        s = s.replace(char, "")
+    return s
+
+# Step 4: Analyze the text
+cleaned_text = remove_punctuation(text).lower()
+words = cleaned_text.split()
+
+for word in words:
+    word_frequency[word] = word_frequency.get(word, 0) + 1
+
+# Step 5: Calculate additional statistics
+if word_count > 0:
+    most_frequent_word = max(word_frequency, key=word_frequency.get)
+    average_word_length = sum(len(word) for word in words) / word_count
+    average_sentence_length = word_count / sentence_count if sentence_count > 0 else word_count
+else:
+    most_frequent_word = None
+    average_word_length = 0
+    average_sentence_length = 0
+
+# Step 6: Display the results
+print("\nText Analysis Results:")
+print("-" * 22)
+print(f"Total Characters: {character_count}")
+print(f"Total Words: {word_count}")
+print(f"Total Sentences: {sentence_count}")
+
+if most_frequent_word:
+    print(f"Most Frequent Word: '{most_frequent_word}' (used {word_frequency[most_frequent_word]} times)")
+
+print(f"Average Word Length: {average_word_length:.2f} characters")
+print(f"Average Sentence Length: {average_sentence_length:.2f} words")
+'''
