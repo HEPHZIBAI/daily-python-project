@@ -25,7 +25,7 @@ while option!=4:
     option=int(input("enter your choice (1-4): "))
 
     if option==1:
-        readfile=open("257.Advanced Person Name Generator.txt",'r')
+        readfile=open("./Beginner Python Projects/41.Advanced Person Name Generator.txt",'r')
         names=readfile.readlines()
         print("total number of names: ",len(names))
         readfile.close()

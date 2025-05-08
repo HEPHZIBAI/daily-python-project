@@ -25,7 +25,7 @@ while True:
     if name=='done':
         break
     phone=input(f"enter phone number for {name}: ").strip()
-    with open("./Beginner Python Projects/93.Simple Contact List Manager.txt",'a') as f:
+    with open("./Beginner Python Projects/91.Simple Contact List Manager.txt",'a') as f:
         f.write(name+":"+phone)
 
 print("contacts saved.")

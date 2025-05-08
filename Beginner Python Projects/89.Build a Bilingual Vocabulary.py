@@ -40,7 +40,7 @@ while True:
 print("your bilingual vocabulary list:")
 
 df=pd.DataFrame({"language 1":word1,"language 2":word2})
-df.to_csv("./Beginner Python Projects/305.Build a Bilingual Vocabulary.csv",index=False)
+df.to_csv("./Beginner Python Projects/89.Build a Bilingual Vocabulary.csv",index=False)
 print("\nYour Bilingual Vocabulary List:")
 print(df.to_string(index=False))
 
