@@ -1,0 +1,20 @@
+
+As the creator of some of the most popular Python courses on Udemy, with over 500,000 students, I learned that the best way for people to learn a programming language is by solving projects. That is what Daily Python Projects is all about.
+
+Every day, you will receive a new Python project or other resources to work on if you subscribe:
+
+What are the projects about?
+Each Python project will be different, covering a huge variety of topics from using Python to automate simple tasks to web scraping, data analysis, building web apps, and many, many more. We will use the most useful and latest Python libraries and frameworks. You will not only have the opportunity to practice Python daily, but also be up to date with Python.
+
+How does this all work?
+You will receive a new email around 6 PM (UTC) every day from Monday to Friday. The email will contain the project description and any necessary files you might need to work on the project. You can code the solution in your local IDE or use the link provided in the email, which points you to an online IDE specifically configured for that project, complete with all necessary libraries and input files, allowing you to start coding immediately. Each project also includes a code solution so you can compare your code with the provided solution.
+
+Spreading the word
+If you prefer to keep this hub a secret, feel free to do so —I understand. 🙌 Otherwise, please spread the word to your friends by sharing this post.
+
+Share
+
+Developing a discipline
+Initially, it might be challenging to motivate yourself to work on the projects, but it will take only a couple of weeks to develop discipline. In no time, you will see your Python skills will have skyrocketed. And if five projects a week are too much for you, feel free to do at least two per week.
+
+Happy coding!

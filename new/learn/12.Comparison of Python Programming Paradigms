@@ -1,0 +1,9 @@
+Today’s video explains the three main Python programming paradigms: procedural, functional, and object-oriented programming.
+
+Procedural Programming: Follows a linear approach, writing code line by line. Example: summing two numbers directly.
+
+Functional Programming: Focuses on creating reusable functions. Example: defining an add function to compute the sum.
+
+Object-Oriented Programming (OOP): Based on classes and objects. Example: a Calculator class with an add method.
+
+What is the best paradigm you should use and when?

@@ -1,0 +1,24 @@
+Will AI replace programmers? When we ask this question, what we're really asking is: Will every layperson be able to make programs using AI? And that is like asking: Did the invention of the hair clipper replace hairdressers?
+
+Did it lead people to cut their own hair? Not really. The tool made the hairdresser's job easier. Just like a hair clipper, AI is merely a tool.
+
+Daily Python Projects is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
+
+But let's take a step back and delve deeper into the issue. The question of whether AI will replace programmers has been on my mind almost daily since ChatGPT emerged about a year ago. I have been using ChatGPT but also other AI tools specialized in generating code such as GitHub Copilot, Cursor AI, and Tabnine. And I understand why some programmers especially wanna-be programmers panic. And it is all due to a fundamental misconception they are having.
+
+The misconception is that “AI can make programs”. That is wrong. AI can write snippets of code. Ai cannot make programs. Yes, it can write small toy programs, but those are not real-world programs. Real programs consist of dozens or even hundreds of source files with intricate configurations and interlinking with other tools like databases which form layers of complexity only human intelligence can navigate.
+
+Just yesterday, I was solving a Django database migration issue and it took me half a day to even understand the problem and I didn’t even bother to think of using tools like ChatGPT to solve it.
+
+AI is just a tool. It makes programmers’ job easier. You no longer have to write snippets of code by hand. You can use AI. But you still have to bring all the pieces together. And only a programmer can do that.
+
+The same principle applies to the hair clipper analogy. You can use a hair clipper instead of manually using scissors, but you still need to have the skill to bring the job together.
+
+AI in programming is simply a new sophisticated tool. I am not even delving into the topic that these AI tools are simply LLMs (Large Language Models). They are highly knowledgeable, but not intelligent. If we still have humans doing simple jobs that require minimal brain effort, it is absurd to think that AI would replace one of the most intellectually-involving activities such as programming.
+
+So, programmers, let's roll up our sleeves and dive into the code! There is so much to learn and build.
+
+Happy coding,
+
+Ardit!
+

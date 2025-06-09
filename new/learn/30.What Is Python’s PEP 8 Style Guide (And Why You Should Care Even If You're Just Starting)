@@ -1,0 +1,94 @@
+Let’s be real.
+When you’re just trying to figure out how to make your code work, the last thing on your mind is how it looks.
+
+But here’s the truth:
+
+Daily Python Projects is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
+
+Clean code isn’t about being “fancy.” It’s about being readable—by you and every other human (or future you) who touches it.
+
+That’s where PEP 8 comes in.
+
+1. So, what is PEP 8?
+PEP 8 is a set of guidelines for how Python code should be written—things like:
+
+Where to put spaces
+
+How to name variables
+
+When to break a long line of code
+
+How to write functions and import modules
+
+Think of it as Python’s style guide—like grammar rules for code.
+
+It’s not about what your code does.
+It’s about making sure your code is clean, consistent, and easy to read.
+
+2. “But why should I care about PEP 8 if I’m just learning?”
+Because:
+
+You’ll read your own code later and not wonder “what the heck is this?”
+
+You’ll work on teams someday (even if it’s just future-you and past-you).
+
+Clean code = fewer bugs. If your code is easy to read, it’s easier to fix.
+
+Also: interviewers care. Reviewers care. Clients care.
+Why? Because clean code is a sign that you’re a thoughtful developer, not just someone who throws things together.
+
+3. The Most Important PEP 8 Rules to Know
+Let’s keep it practical. If you follow just these, you’re already ahead:
+
+✅ Use 4 spaces for indentation (not tabs)
+def greet():
+    print("Hello")
+❌ Don't write code like this:
+def greet():print("Hi")
+✅ Put spaces around operators
+x = 10 + 3
+Not:
+
+x=10+3
+✅ Leave 2 blank lines before defining a new function (outside a class)
+def add():
+    return 1 + 1
+
+
+def subtract():
+    return 2 - 1
+✅ Name variables clearly, using lowercase with underscores
+user_age = 32
+Not:
+
+ua = 32  # unreadable
+✅ Keep lines under 79 characters
+Why? Because when you’re reading code side-by-side (like in a Git diff), long lines are a pain.
+
+4. How to Actually Follow PEP 8 (Without Memorizing It)
+You don’t need to remember all this.
+Just use tools that catch your mistakes for you:
+
+flake8 – highlights PEP 8 violations in your code
+
+black – automatically formats your code to follow the rules
+
+pylint – checks style and code quality
+
+I personally use black on every project. One command. Instant cleanup.
+
+black my_script.py
+5. TL;DR
+PEP 8 = Python’s official style guide for writing clean, readable code
+
+It’s not about being strict. It’s about making your code easier to understand
+
+Use tools like black to fix things automatically
+
+Start small. Even fixing your spaces and variable names makes a difference
+
+Coding is hard enough—don’t let messy formatting make it harder.
+
+Clean code makes everything better.
+
+— Ardit

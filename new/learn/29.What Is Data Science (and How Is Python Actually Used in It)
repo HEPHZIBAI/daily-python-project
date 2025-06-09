@@ -1,0 +1,84 @@
+
+What is data science?
+At its core, data science = 3 things:
+
+Collecting data – from files, websites, APIs, databases.
+
+Understanding the data – filtering it, cleaning it, analyzing it.
+
+Using it to answer real questions – through charts, numbers, or predictions.
+
+In other words, you use data science to answer questions such as:
+
+Daily Python Projects is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
+
+“Hmm, I wonder what people buy most on Fridays?”
+“How many subscribers do I gain each month?”
+“Which city has the worst air pollution trends over the past 10 years?”
+
+And Python is the tool to go find the answer.
+
+So how does Python fit into all this?
+Here’s where Python shines: it has libraries—tools—that make all the boring, repetitive stuff super fast.
+
+Let me give you a real-world example:
+
+Example: You're analyzing a CSV of customer orders
+Step 1: Collect the data
+import pandas as pd 
+
+data = pd.read_csv("orders.csv")
+Step 2: Understand the data
+data.head()  # Preview first 5 rows  
+data["country"].value_counts()  # See where most orders come from
+Step 3: Answer the question
+# What’s the average order size?
+print(data["order_value"].mean())
+You just did data science. It is the “science” of the data.
+
+Python Tools Used in Data Science
+Here’s what Python brings to the table:
+
+pandas – for data analysis and wrangling
+
+matplotlib / seaborn – for plotting and visualizing data
+
+numpy – for number crunching
+
+scikit-learn – for making predictions
+
+jupyter – for running experiments and sharing results
+
+requests / BeautifulSoup – for collecting data from websites
+
+Each one is a tool. You don’t need to learn them all at once.
+You just pick the right one for the job—when you need it.
+
+So should you learn data science?
+Only if:
+
+You like making sense of messy stuff
+
+You enjoy spotting patterns
+
+You want to work in fields like finance, marketing, sports, healthcare, or AI
+
+You enjoy asking “why?” and trying to prove it with numbers
+
+If yes—start small.
+And start with Python.
+(You’re already in the right place.)
+
+TL;DR
+Data science = using data to answer real questions.
+
+Python = the easiest way to do it.
+
+You don’t need to “master” Python first.
+
+Just start with a question and use code to chase the answer.
+
+Want a project that gets your hands dirty with real data? I will sen one tomorrow and another on Friday.
+
+— Ardit
+
