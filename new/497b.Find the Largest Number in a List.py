@@ -18,7 +18,6 @@ Expected Output
 '''
 
 a=list(map(int,input("enter numbers separated by commas: ").split(',')))
-
 l=0
 
 for i in a:

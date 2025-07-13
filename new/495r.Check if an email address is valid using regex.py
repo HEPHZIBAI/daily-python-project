@@ -20,6 +20,7 @@ Expected Output
 '''
 
 import re
+
 email_pattern = r'^[\w\.-]+@[\w\.-]+\.\w{2,}$'
 email = input("Enter an email to check if it's valid: ").strip()
 

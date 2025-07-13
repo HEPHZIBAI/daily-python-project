@@ -5,24 +5,24 @@ Having taught over 500,000 students on Udemy has taught me one important thing. 
 So, what is this all about?
 Daily Python Projects will be your daily newsletter hand-sent by me Monday to Friday through the Substack platform, which is a clean, ad-free tool designed to learn new things free of distractions.
 
-If you received this post by email, that means you are already subscribed. If not, subscribe below to receive one Python project along with the code solution every day.
+If you received this post by email, that means you are already subscribed. 
+If not, subscribe below to receive one Python project along with the code solution every day.
 
 Starting today, you will receive a small Python project to work on every day 🎉
 
-Solutions will be provided in every post. You will also get a link to an online IDE with a pre-configured environment that has all the Python libraries installed for that project so you can start coding right away without overhead. Of course, you can use your local IDE if you prefer.
+Solutions will be provided in every post. 
+You will also get a link to an online IDE with a pre-configured environment that has all the Python libraries installed for that project so you can start coding right away without overhead. 
+Of course, you can use your local IDE if you prefer.
 
 Doing these projects will be extremely beneficial for you for three reasons:
-
-Stay Motivated: A new challenge every day keeps the learning exciting and the momentum going.
-
-Build a Portfolio: With each project, you'll have something tangible to show for your efforts, building up a portfolio that showcases your growing skills.
-
-Learn Practically: Theory is essential, but there's nothing like applying what you've learned to solve real problems.
-
-Have Fun: I don’t know about you, but I love challenges. They keep me sharp and it’s tons of fun.
+    Stay Motivated: A new challenge every day keeps the learning exciting and the momentum going.
+    Build a Portfolio: With each project, you'll have something tangible to show for your efforts, building up a portfolio that showcases your growing skills.
+    Learn Practically: Theory is essential, but there's nothing like applying what you've learned to solve real problems.
+    Have Fun: I don’t know about you, but I love challenges. They keep me sharp and it’s tons of fun.
 
 So, shhhh, don’t tell anyone about this platform if you want to be the first to benefit from it.
-
-I will now start preparing the first project. It should be in your inbox in a couple of hours. Promise!
+I will now start preparing the first project. 
+It should be in your inbox in a couple of hours. 
+Promise!
 
 Talk later!
