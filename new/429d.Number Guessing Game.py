@@ -1,0 +1,9 @@
+'''
+Python code dictation guessing the number game. First line, import the random library. Second line, call the random.rantInt function with argument values 1 and 10. The function output should be stored in a variable named secret underscore number. So we are calculating a random number from one to ten.
+Next line, create a variable named attempt which is equal to three. Next line, start a while loop which checks if attempt is greater than zero In the next line of the while loop, call the input function with the string guess the number between 1 and 10 as the argument of the input function call.
+In the same line, convert the input function output to an integer and store the results in a variable named guess. Next line of the while loop start an if conditional which checks if the variable guess is equal to the variable secret underscore number in the next line of the if conditional block
+print out the string congratulations, you guessed it right. In the next line of the if conditional, write a break statement. In the next line, start the elif block, which checks if the variable guess is less than the variable secret underscore number in the next line of the elif block
+print out the string too low try again in the next line start the else line and in the next line of the else block print out the string too high try again exit the if, elif, else, block and still inside the while loop write attempt is equal to attempt minus one. Exit the while loop
+and in the next line start an if conditional which checks if attempt is equal to zero and in the next line of the if conditional print out sorry the secret number was in curly bracket write secret underscore number and this should be an f string. End of the script.
+
+'''

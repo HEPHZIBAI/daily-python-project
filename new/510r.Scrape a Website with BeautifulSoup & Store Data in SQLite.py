@@ -1,0 +1,51 @@
+'''
+
+Build Real Python Skills by Combining Web Scraping and Databases 🚀
+
+One of the most powerful uses of Python is pulling data from the web and storing it locally for analysis, search, or even powering your own apps.
+That’s why these daily practice projects are so valuable — each one adds a new tool to your problem-solving toolkit.
+Today, you’ll build a small but super practical program that scrapes data from a website using BeautifulSoup and saves it into an SQLite database.
+
+This is exactly how countless internal tools and dashboards start: a script that gathers data and keeps it organized in a database you can query anytime.
+
+Daily Python Projects is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
+
+Project Task
+Your challenge is to write a Python program that:
+
+✅ Fetches data from the website
+
+http://books.toscrape.com/
+
+— a site made specifically for practicing web scraping.
+✅ Extracts each book’s title and price from the main page.
+✅ Saves this data into a local SQLite database file called books.db, inside a table named books with columns title and price.
+✅ Prints out the data it found so you can see it before it goes into the database.
+
+By doing this, you’ll practice:
+
+Sending HTTP requests and downloading HTML with requests,
+
+Parsing and extracting specific data using BeautifulSoup,
+
+Working with SQLite to create tables and insert records,
+
+And tying all these skills together into a practical end-to-end script.
+
+Expected Output
+When you run your program, it might print:
+
+
+And after running, you’ll have a books.db SQLite file in your folder that contains all the book data. Here is how the database table looks like after the scraping has finished:
+
+
+💡 Hint
+Not sure how to start? Click the Show Hint button.
+It will show you how to use requests.get() to fetch the HTML, how to select elements with BeautifulSoup, and how to create and insert records into an SQLite table.
+
+Show Hint
+
+
+📚 It also includes a quick reminder to use executemany() to insert multiple records efficiently.
+
+'''

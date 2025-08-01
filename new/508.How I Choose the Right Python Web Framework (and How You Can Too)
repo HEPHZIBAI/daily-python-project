@@ -1,0 +1,110 @@
+Over the years, I’ve used Python to build everything from tiny automation scripts to full-fledged websites that serve thousands of users. Along the way, there’s one question I keep seeing pop up, whether it’s in my inbox, in course discussion boards, or in random Python forums:
+
+“I want to build a web app in Python. Which framework should I use?”
+
+It sounds like a simple question, but if you’re new to web development, the answers online can feel overwhelming. You’ll see long comparison charts with dozens of frameworks you’ve never heard of. Or you’ll get advice that’s so specific it stops being helpful — like “use X if you’re building a social media platform with WebSockets, otherwise use Y.”
+
+So I want to give you a more human answer.
+Not a big abstract chart — but how I actually pick a framework for my projects, and what I’ve learned through years of building with Python.
+
+Daily Python Projects is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
+
+Why you even need a framework
+First, let’s get this straight: technically, you can build a web app in Python without any framework at all.
+
+You could open a socket, handle raw HTTP requests, parse headers, serve HTML files, and manage cookies by hand. Python has all the low-level tools to do it. But I’ve never met a serious developer who recommends doing it that way — unless it’s for pure learning or a niche experiment.
+
+Why? Because frameworks exist precisely to handle that tedious boilerplate for you. They let you focus on your app’s unique logic instead of rewriting the same plumbing that thousands of developers before you have already perfected.
+
+So for real-world projects, you’ll want to pick a web framework. The only question is: which one?
+
+My personal shortlist: Django, Flask, FastAPI, and Streamlit
+There are dozens of Python web frameworks out there — some huge and comprehensive, others tiny and hyper-specialized. Over time, I’ve found that four cover almost every type of web project I want to build:
+
+Django – the heavy-duty framework for big, multi-feature sites with databases and lots of moving parts.
+
+Flask – the lightweight, minimal option for small tools or learning how the web works.
+
+FastAPI – a modern, high-speed framework for building APIs that power frontend apps or mobile clients.
+
+Streamlit – an incredibly simple way to turn a Python script into an interactive web app, especially for data analysis or machine learning demos.
+
+Let me walk you through how I use each of these, with some stories from my own projects.
+
+When I use Django: Big sites with serious structure
+Years ago, when I decided to build PythonHow — a site full of Python tutorials, how-to searches, video courses, and even an interactive chatbot — there was no question in my mind that I’d use Django.
+
+Why? Because Django is built for exactly that kind of project. It handles user accounts, admin panels, database models, templating, routing, security features, all out of the box. And it does it with a clear structure that’s easy to maintain as the project grows.
+
+One of the things I love most about Django is how it organizes large projects. You can split your website into smaller “apps” — maybe one for your course platform, another for a blog, another for the chatbot — all under the same project. Each app is isolated, so changes don’t become an unmanageable tangle.
+
+Django’s ORM (object-relational mapping) is another reason I keep coming back. In PythonHow, all the HowTo questions are stored in a database. Each type of data is represented as a Python class. So I don’t have to write raw SQL queries for every little thing. I just work with objects, and Django takes care of translating them to database operations.
+
+If you ever plan to build a large site with multiple features — user accounts, dashboards, various sections that evolve over time — Django is hard to beat.
+
+When I use Flask: Small tools or teaching web basics
+But I wouldn’t reach for Django every time. Sometimes you just want to build something small — like a web app that takes a text input and returns a PDF. Or a little tool that logs entries in a file. For those, Django feels like using a chainsaw to cut a cucumber.
+
+That’s where Flask comes in. Flask is minimal by design. It doesn’t impose a rigid project structure. It doesn’t set up a big directory tree for you. It doesn’t even decide what database you should use. It just gives you the essentials: a routing system, template rendering, and a way to handle requests.
+
+I love teaching Flask to beginners because it forces you to see what’s happening at the HTTP level. You define routes directly. You handle POST and GET requests yourself. You see how URL parameters work. It’s a bit like driving a manual car: you understand the mechanics, which makes you a better driver in the long run.
+
+If I need to build a quick tool, or if I want to show someone exactly how web requests flow, Flask is still my favorite starting point.
+
+When I use FastAPI: Modern APIs and microservices
+In the last few years, I’ve found myself using FastAPI more and more. The web isn’t just about rendering HTML anymore. Often, you’re building an API that serves data to a separate frontend — maybe a React app, maybe a mobile app, maybe a dashboard that calls your endpoints over AJAX.
+
+FastAPI was designed for exactly this kind of work. It uses Python’s type hints (from typing) to automatically validate incoming data and generate documentation. The first time I ran a FastAPI app and it instantly created a Swagger UI where I could test all my endpoints — without writing a single line of documentation — I was hooked.
+
+It’s also incredibly fast. FastAPI is built on Starlette and uses async under the hood, so it can handle a lot of simultaneous requests. If I’m building a high-performance backend, or a microservice that other services will call, FastAPI is usually my pick.
+
+It’s also very clean. Your route functions look almost like pure Python functions, with automatic data parsing and helpful error messages.
+
+When I use Streamlit: Data apps without the web hassle
+Then there’s Streamlit. Streamlit is completely different from the other frameworks on this list. It’s not designed to build traditional websites or APIs. Instead, it’s designed to turn a Python script into an interactive web app — with widgets, charts, sliders, data uploads — without ever touching HTML, CSS, or JavaScript.
+
+If you’re a data scientist or you like building small analysis scripts, Streamlit feels almost magical. You just write a Python script with st.title(), st.line_chart(), st.slider(), and so on, and Streamlit serves it as a live web app.
+
+I’ve used Streamlit for quick prototypes, for showing machine learning predictions to non-programmers, and for building internal dashboards that needed to go from concept to demo in a day.
+
+The framework I wish I’d picked earlier (and why it doesn’t matter)
+If I’m honest, I spent too long early in my career thinking I had to find the perfect framework. I’d read endless comparisons on Reddit, watch heated debates about Django vs Flask, or wonder if I should learn something more obscure just to future-proof my skills.
+
+Here’s what I’ve learned: it doesn’t matter nearly as much as I thought.
+
+If you understand the fundamentals — how HTTP works, what a route is, how data gets from a form to your backend, how to query a database — switching frameworks is pretty easy. They all do the same basic things in slightly different ways.
+
+So pick one that matches your current project:
+
+If you want to learn web development from the ground up, start with Flask. It’ll show you what’s going on under the hood.
+
+If you’re building something big and multi-functional right now, start with Django and let it handle the structure.
+
+If you need to build a JSON API for a frontend or a mobile app, try FastAPI. It’s modern, fast, and incredibly pleasant to work with.
+
+If you’re making a data analysis app or a quick dashboard, go with Streamlit and skip the web hassle entirely.
+
+You’ll end up learning multiple frameworks over time anyway — because each shines in different places. The skills transfer. Each one you learn makes the next easier.
+
+One last thing: build before you overthink
+I get a lot of emails from people who are stuck in “framework paralysis.” They’re afraid to start building because they don’t know if they’ve picked the right tool. Let me save you some time: there is no perfect choice.
+
+The only real mistake is never starting. The best way to figure out which framework is right is to actually build something with it.
+
+Build a tiny site in Flask.
+
+Build a multi-feature platform in Django.
+
+Build an async API in FastAPI.
+
+Build a quick ML demo in Streamlit.
+
+You’ll see firsthand what each does well (and what drives you crazy). And you’ll come out of it not just with opinions — but with real skills you can apply anywhere.
+
+Final thoughts
+I still use all four of these frameworks today, depending on what I’m building. That’s the beauty of Python: there’s a tool for almost every kind of web project, whether it’s a heavy-duty multi-user site or a quick internal dashboard.
+
+So don’t wait around trying to make the perfect choice. Pick the one that matches your current needs and start coding. That’s how you grow — and how you turn your ideas into real, working products.
+
+If you ever want to share what you’re building (or get unstuck on picking the next framework), reply to this post. I always enjoy hearing what others are working on.
+

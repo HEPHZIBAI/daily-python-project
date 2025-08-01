@@ -1,0 +1,100 @@
+So you’ve been learning Python.
+You’ve got the basics down — loops, functions, maybe even some modules.
+But now comes the big question:
+
+    “What do I actually do with this?”
+
+Web dev? Data science? Automation? App building?
+There are so many options it’s easy to freeze.
+
+Here’s what I tell my students:
+
+You don’t need to choose the “right” path. You need to start walking.
+You can always switch lanes later. But first, you need to know what each lane really looks like.
+
+1. Automation – Use Python to Save Time at Work
+    This path is for people who look at repetitive tasks and think,
+        “There has to be a better way.”
+    
+    With automation, you write Python scripts that:
+        Rename and organize hundreds of files in seconds
+        Clean messy Excel sheets or CSVs with one line of code
+        Auto-download reports from websites or emails
+        Send out weekly summary emails automatically
+        Scrape product prices or competitor data
+
+    Real-life example:
+        You work in a logistics company. Every Monday, you manually combine 12 Excel reports.
+        With Python, you write a script that does it in 10 seconds — and never make copy/paste errors again.
+
+    Great for: office workers, analysts, freelancers, busy people
+
+2. Web Development – Build Websites and Online Tools
+    Want to make something people can access in a browser? That’s web dev.
+    
+    With Python web frameworks like Flask or Django, you can:
+        Build personal portfolios or blogs
+        Create dashboards and internal tools for businesses
+        Let users register, log in, and interact with data
+        Build MVPs (minimum viable products) for startup ideas
+        Launch real products that make money
+
+    Real-life example:
+        You build a web app that lets people convert files, split PDFs, or track workouts — and launch it on Heroku or Render for the world to use.
+
+    Great for: freelancers, startup founders, product builders
+
+3. Data Science – Find Answers in Messy Data
+    This is the path of asking, “What’s happening here?” and using code to answer it.
+
+    You’ll use Python to:
+        Load and clean data from spreadsheets, databases, or APIs
+        Analyze trends in sales, user behavior, or survey responses
+        Visualize findings in beautiful charts
+        Build simple machine learning models (like predicting house prices or churn)
+        Present insights to make better business decisions
+
+    Real-life example:
+        You work at a retail company. You write a Python script to find the 10 products with the fastest-growing sales. Your team uses that to plan next quarter’s strategy.
+    
+    Great for: analysts, researchers, marketers, finance folks, aspiring data scientists
+
+4. App Building – Solve Real Problems with Code
+    This is for people who love making useful stuff.
+    You combine different tools to build complete Python apps that run locally or online.
+
+    Apps like:
+        A reminder tool that sends scheduled emails
+        A job scraper that saves new listings daily
+        A GUI app that converts currencies or PDFs
+        A weather dashboard that updates every hour
+        A program that logs your daily habits and visualizes progress
+
+    Real-life example:
+        You build a script that emails you every 3 months to remind you to cancel that free trial.
+        You don’t just know Python — you use it to solve your own problems.
+
+    Great for: builders, tinkerers, side project junkies, future indie hackers
+
+Not sure which one is for you?
+    You don’t need to figure it all out now.
+    Try one.
+    Get a taste.
+    If it clicks, go deeper. If it doesn’t, try another.
+    There’s no perfect plan.
+    There’s just momentum.
+
+Want to start building real-world apps?
+    That’s what I teach in my Real World Python course series.
+    Each course walks you through building a complete, useful app — not just toy code.
+
+👉 Start here: Build an automated email reminder
+More apps coming soon.
+
+Whatever path you choose — just remember:
+Learning Python is good.
+Using Python is better.
+
+Let’s build.
+
+— Ardit

@@ -1,0 +1,60 @@
+You open your code editor.
+You stare at the screen.
+You kind of know what you want the code to do… but you don’t know how to start.
+So you scroll. You get distracted. You close the laptop.
+
+I’ve been there too many times.
+
+Here’s a trick that helped me — and I still use it almost every day:
+
+Write a comment before you write the code.
+Literally just type what the code should do — in plain English.
+
+Example:
+
+    # Go through each number and check if it's even
+Now your brain has a target.
+
+So you write:
+
+for number in numbers:
+    if number % 2 == 0:
+        print(number)
+That one little comment removes the pressure of figuring out the code and writing it perfectly at the same time.
+
+Why this works:
+    You focus on the what, not the how.
+    You get moving — even when the syntax is fuzzy.
+    You turn a blank screen into something you can interact with.
+    You write cleaner, more understandable code.
+
+Bonus tip: use # TODO comments
+    Sometimes you don’t even know how to describe the full logic yet. That’s fine. Just leave yourself a trail like this:
+        # TODO: sort the list by second item
+        # TODO: handle empty user input
+    # TODO: connect this function to the GUI
+Now you have a roadmap.
+Even better? Your code editor can help you track these TODOs:
+How Editors Handle TODO Comments
+
+PyCharm
+    Recognizes # TODO: comments automatically
+    Shows them in a dedicated list (View → Tool Windows → TODO)
+    Lets you manage and jump to all your TODOs from one panel
+
+VS Code
+    Recognizes TODOs as regular comments by default
+    Use Ctrl+Shift+F to search all TODOs quickly
+    Install extensions like:
+        TODO Highlight – adds color to your # TODO and # FIXME comments
+        TODO Tree – shows a sidebar of all TODOs across files
+
+TL;DR
+    When you’re stuck, don’t try to code perfectly.
+    Just write a comment about what you want the code to do.
+    Even a simple # TODO: figure this out later keeps you in motion.
+
+You don’t need to be ready.
+You just need to start thinking on paper — one comment at a time.
+
+— Ardit

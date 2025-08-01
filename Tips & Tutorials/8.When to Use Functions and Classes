@@ -1,0 +1,33 @@
+Welcome to this guide on deciding when to use functions or classes in Python. Understanding this can significantly enhance your coding skills and project organization. Let’s explain this using examples.
+
+Let’s talk about functions first
+Functions are your go-to for tasks that can be separated from the object’s state. They are perfect for carrying out specific calculations or operations that do not require saving any information or state between executions.
+
+Example 1: Calculate the Area of a Circle
+This function calculates the area of a circle given its radius. This is a typical use case for a function because it performs a calculation without needing to remember any previous state.
+
+def calculate_area(radius):
+    pi = 3.14159
+    return pi * (radius ** 2)
+
+# Usage
+print(calculate_area(5))  # Outputs 78.53975
+Example 2: Check Prime Number
+This function checks whether a number is prime. It’s a good example of a function because it evaluates each number independently of other numbers.
+
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# Usage
+print(is_prime(29))  # Outputs True
+print(is_prime(15))  # Outputs False
+Let’s now have a look at classes
+Classes are suited for more complex tasks that involve managing multiple related properties and behaviors/methods. They allow you to encapsulate data and functions together, making the code more modular and easier to understand.
+
+Example 1: Bank Account Manager
+This class manages a bank account, allowing for deposits and withdrawals, which involves maintaining the state of the account balance.
