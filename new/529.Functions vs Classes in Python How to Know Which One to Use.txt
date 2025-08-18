@@ -1,0 +1,200 @@
+'''
+
+Knowing the difference between a function and a class and when to use one or the other is one of the most confusing things for beginners so let’s explain that in simple language. Let’s start with an analogy.
+
+Real‑world analogy
+Function = a vending machine button: press it (call it) with a choice (input), it dispenses an item (output), done.
+
+Class = a customer account: it has a name, balance, history (data) and can deposit, withdraw, or show statements (behaviors). It persists over time.
+
+Start with functions by default
+If you can solve a task with a few lines that:
+
+Daily Python Projects is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
+
+take inputs,
+
+compute something,
+
+return a result,
+
+…use a function.
+
+Example 1: Convert Celsius to Fahrenheit
+def c_to_f(c):
+    return c * 9/5 + 32
+
+print(c_to_f(0))     # 32.0
+print(c_to_f(37.5))  # 99.5
+No memory, no state, just pure input → output.
+
+Example 2 (real app): Validate an email
+import re
+
+def is_valid_email(email: str) -> bool:
+    pattern = r"^[^@\s]+@[^@\s]+\.[^@\s]+$"
+    return bool(re.match(pattern, email))
+This is a utility operation. A function is perfect.
+
+Use a class when data and behavior belong together
+If you find yourself passing the same group of values around repeatedly, or you need something that remembers information between calls, reach for a class.
+
+Signs you need a class
+You keep passing the same parameters (e.g., api_key, base_url) to many functions.
+
+You need to maintain state across operations (e.g., a running balance, a session, a cache).
+
+You’re modeling a real‑world entity with properties and actions (Order, User, BankAccount, Cart).
+
+Your logic will grow (more related operations) and should be grouped.
+
+Example 3: BankAccount (stateful object)
+class BankAccount:
+    def __init__(self, owner: str, balance: float = 0.0):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount: float):
+        self.balance += amount
+
+    def withdraw(self, amount: float):
+        if amount > self.balance:
+            raise ValueError("Insufficient funds")
+        self.balance -= amount
+
+    def __repr__(self):
+        return f"<BankAccount owner={self.owner!r} balance={self.balance:.2f}>"
+
+acc = BankAccount("Ardit", 100)
+acc.deposit(50)
+acc.withdraw(20)
+print(acc)  # <BankAccount owner='Ardit' balance=130.00>
+BankAccount keeps track of data (owner, balance) and exposes behaviors (deposit, withdraw) that mutate that state.
+
+Example 4 (real app): API client with shared config
+If your app talks to an external API, you often need the same headers, base URL, and token every time. Don’t pass those into every function—wrap them in a class.
+
+import requests
+
+class WeatherClient:
+    def __init__(self, base_url: str, api_key: str):
+        self.base_url = base_url.rstrip("/")
+        self.api_key = api_key
+        self.session = requests.Session()
+        self.session.headers.update({"Authorization": f"Bearer {self.api_key}"})
+
+    def current(self, city: str):
+        url = f"{self.base_url}/weather/current"
+        resp = self.session.get(url, params={"city": city})
+        resp.raise_for_status()
+        return resp.json()
+
+client = WeatherClient("https://api.example.com", "SECRET123")
+print(client.current("Lisbon"))
+The client remembers configuration and reuses a session. That’s a class.
+
+Refactoring path: start as functions, promote to a class when needed
+A common, professional workflow:
+
+Prototype with functions (fast and simple).
+
+When you notice repeated parameters or related operations, group them into a class.
+
+Keep simple helpers as functions even inside a module that also has classes.
+
+Example 5: From functions → class
+Initial procedural/functions version:
+
+def subtotal(items):
+    return sum(price * qty for price, qty in items)
+
+def add_tax(amount, rate):
+    return amount * (1 + rate)
+
+def format_invoice(customer, total):
+    return f"Invoice for {customer}: ${total:.2f}"
+
+items = [(10.0, 2), (5.0, 3)]
+total = add_tax(subtotal(items), 0.23)
+print(format_invoice("Alice", total))
+As the app grows, you keep passing customer, items, tax_rate, maybe discounts or shipping. Time to promote to a class:
+
+class Invoice:
+    def __init__(self, customer: str, tax_rate: float = 0.0):
+        self.customer = customer
+        self.tax_rate = tax_rate
+        self.items = []  # list of (price, qty)
+
+    def add_item(self, price: float, qty: int = 1):
+        self.items.append((price, qty))
+
+    def subtotal(self) -> float:
+        return sum(price * qty for price, qty in self.items)
+
+    def total(self) -> float:
+        return self.subtotal() * (1 + self.tax_rate)
+
+    def render(self) -> str:
+        return f"Invoice for {self.customer}: ${self.total():.2f}"
+
+inv = Invoice("Alice", tax_rate=0.23)
+inv.add_item(10.0, 2)
+inv.add_item(5.0, 3)
+print(inv.render())
+Now all invoice‑related data and logic live together.
+
+“But I could do everything with classes” (or functions). Should I?
+You can, but you shouldn’t. Use the simplest tool that fits:
+
+If it’s a single calculation or stateless operation → function.
+
+If it’s a concept with data + actions that persists → class.
+
+Over‑classing small scripts makes them harder to read. Under‑classing large apps spreads related data and logic across many functions with long parameter lists. Aim for cohesion.
+
+Real app scenarios: what to choose
+1) Image processing tool
+Functions for stateless transforms: resize(image), grayscale(image), compress(image, quality).
+
+Class when you need a pipeline with shared settings or caching:
+
+class ImagePipeline:
+    def __init__(self, quality=80):
+        self.quality = quality
+    def process(self, image_path): ...
+2) E‑commerce cart
+Class for Cart (holds items, totals, discounts), Order, Customer.
+
+Functions for utilities like format_currency(amount) or validate_coupon(code).
+
+3) Email sending
+Function for a one‑off send with a third‑party service:
+
+def send_email(to, subject, body): ...
+Class for a reusable client with API key, retry policy, templates:
+
+class EmailClient: ...
+4) Data pipeline
+Functions for pure steps: load_csv, clean, aggregate, export.
+
+Class to encapsulate pipeline configuration, paths, and logging:
+
+class SalesETL: ...
+Quick decision checklist
+Choose a function if:
+
+It’s a single, well‑defined operation.
+
+It doesn’t need to remember anything between calls.
+
+You can describe it as “given X, compute Y”.
+
+Choose a class if:
+
+You have data that multiple operations use and modify.
+
+You want to model a real‑world entity (User, Cart, Order, Account).
+
+You keep passing the same parameters around.
+
+You need to maintain state (session, balance, cache) across method calls.'''

@@ -1,0 +1,212 @@
+If you’re learning to program, you’ve probably noticed: there isn’t just one language. There are dozens.
+
+And they all seem to do different things.
+
+Daily Python Projects is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
+
+This post gives you a clear, real-world overview of the most widely used programming languages today, with practical examples — not just abstract categories like “backend infrastructure.”
+
+You’ll learn:
+
+What each language is used for
+
+Where it shows up in real applications
+
+How it connects to the rest of a typical tech stack
+
+Python
+What it’s used for:
+Building websites (especially the backend, where business logic and databases live)
+
+Data science, machine learning, and data analysis
+
+Automating repetitive tasks (renaming files, sending emails, scraping websites)
+
+Writing scripts that “glue” systems together
+
+Where it’s used:
+Google uses Python for internal tools and AI systems
+
+Instagram’s backend is largely Python
+
+Udemy uses the Django web framework (written in Python) to power its entire website
+
+What beginners should understand:
+If you build a website in Python, Python handles what happens after someone submits a form or clicks a button — like storing data in a database, sending a confirmation email, or performing calculations.
+
+
+Python is also widely used for data analysis. If you’ve ever seen people analyze spreadsheets or build ML models, they were likely using pandas, scikit-learn, or matplotlib — all Python libraries.
+
+
+JavaScript
+What it’s used for:
+Making websites interactive
+
+Building anything that runs inside the browser (drop-downs, sliders, autocomplete, etc.)
+
+Also used on the backend via Node.js
+
+
+Where it’s used:
+Every modern website: Gmail, Netflix, Facebook, LinkedIn, etc.
+
+React (a JavaScript library) powers the frontend of YouTube, Instagram, Twitter
+
+What beginners should understand:
+If you click a “submit” button and the page updates instantly without the URL reloading — that’s JavaScript. If the URL reloads, that is a backend language such as Python or PHP.
+
+Javascript doesn’t talk directly to databases or files like Python does — it handles what the user sees and interacts with in the browser.
+
+HTML and CSS (not programming languages, but essential)
+What they’re used for:
+HTML defines the structure of a webpage (headings, links, buttons)
+
+CSS defines how it looks (fonts, colors, spacing)
+
+Where they’re used:
+Every website uses HTML and CSS
+
+Modern websites use CSS frameworks like Bootstrap or Tailwind to save time
+
+Here is how a webpage would look without CSS or Boostrap (left) and with CSS/Bootstrap (right).
+
+
+What beginners should understand:
+HTML is like the skeleton. CSS is the clothing and makeup.
+
+Even if you use Python or JavaScript to build your app, you still need HTML/CSS to show it to users.
+
+Java
+What it’s used for:
+Building complex systems for banks, insurance companies, and governments
+
+Creating Android apps
+
+Powering large backends that handle high traffic
+
+Where it’s used:
+Android apps are often written in Java
+
+Netflix, Airbnb, Amazon, and many banks use Java to handle requests from millions of users
+
+What beginners should understand:
+Java is used when stability, speed, and reliability matter over time. It's popular in enterprise systems because it’s been battle-tested for decades.
+
+Java apps often handle things like:
+
+Payment processing
+
+Inventory systems
+
+Search services
+
+Large user databases
+
+SQL (Structured Query Language)
+What it’s used for:
+Interacting with databases
+
+Finding, updating, or deleting data
+
+Performing calculations inside the database (like counting users or summing purchases)
+
+Where it’s used:
+Everywhere data is stored in tables
+
+Used in PostgreSQL, MySQL, SQLite, Microsoft SQL Server, and more
+
+What beginners should understand:
+Let’s say your Python app needs to find all users who signed up this week. Python sends a request to the database using SQL, and the database responds with results.
+
+Here is a typical SQL query:
+
+SELECT name, age
+FROM students
+WHERE age > 18
+ORDER BY age ASC;
+If you were to execute that, SQL would access the “students” database table and retrieve the names and ages of students older than 18, sorted by age in ascending order.
+
+SQL isn’t a general-purpose language — you use it to communicate with relational databases.
+
+TypeScript
+What it’s used for:
+The same things as JavaScript — but with types, which help prevent bugs
+
+Building larger, more complex frontends where reliability matters
+
+Where it’s used:
+Microsoft, Slack, Asana, Airbnb, and most large-scale web apps
+
+Often used with React, Angular, or Vue
+
+What beginners should understand:
+TypeScript is just JavaScript with safety checks. It helps developers avoid subtle bugs in large codebases by catching errors during development.
+
+It compiles to JavaScript — browsers don’t run TypeScript directly.
+
+Go (Golang)
+What it’s used for:
+Writing tools that power cloud infrastructure (deployment, networking, logging)
+
+Building fast web APIs and background services
+
+Where it’s used:
+Docker, Kubernetes, and Terraform are all written in Go
+
+Google, Cloudflare, and Uber use Go to power parts of their infrastructure
+
+What beginners should understand:
+Imagine a service that needs to handle 10,000 web requests per second, like:
+
+Serving images
+
+Managing chat messages
+
+Logging metrics
+
+Go is used to build those backend services that run behind the scenes. It’s fast, simple, and handles concurrency well.
+
+Rust
+What it’s used for:
+Writing high-performance, low-level software where memory safety matters
+
+Replacing parts of older systems written in C/C++
+
+Newer use cases: blockchain, web servers, browser engines
+
+Where it’s used:
+Mozilla Firefox uses Rust for some core components
+
+Amazon, Cloudflare, and Meta are using Rust for safer, faster systems
+
+Solana (a blockchain) is written in Rust
+
+What beginners should understand:
+Rust is used where performance and safety are both critical. It’s not the easiest language to learn, but it prevents bugs like memory leaks or crashes that C/C++ are notorious for.
+
+It's not needed for most Python-level work, but it’s gaining popularity for system tools and high-stakes software.
+
+C and C++
+What they’re used for:
+Writing operating systems
+
+Building video games
+
+Creating compilers, interpreters, and device drivers
+
+Where they’re used:
+Linux, Windows, macOS core components
+
+Photoshop, MySQL, Blender, Unreal Engine
+
+What beginners should understand:
+You won’t use C/C++ for typical web apps or data science, but the tools and software you run every day likely rely on them.
+
+C/C++ give you full control of memory and CPU usage — which is great for speed, but easy to mess up.
+
+Summary: Who Uses What, and Why
+
+Still confused?
+If you're just getting started, Python is an excellent entry point — but the more you understand how the other languages fit in, the more capable you'll become across real-world systems.
+
+Daily Python Projects is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
